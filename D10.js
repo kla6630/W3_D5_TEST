@@ -264,7 +264,14 @@ console.log(
   "-----------------------------------------------------ESERCIZIO 9-----------------------------------------------------"
 );
 
-///////
+function howManyDays(date) {
+  var timeDiff = Date.now() - date.getTime(); // differenza tra data attuale e data indicata
+  var daysDiff = timeDiff / (1000 * 60 * 60 * 24); //conversione in giorni
+  return Math.floor(daysDiff); // ritorna il valore ottenuto nella variabile daysDiff
+}
+var someDate = new Date("2023-12-14"); // inserire la data per la quale si vuole ricavare la differenza di giorni
+var daysSince = howManyDays(someDate);
+console.log(daysSince);
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
